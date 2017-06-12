@@ -5,6 +5,8 @@ Examples drawn from
 [https://www.tutorialspoint.com/python/](https://www.tutorialspoint.com/python/)
 
 ### Python 2 and 3 are incompatible
+In python 2 print is a statement but in python 3 print is a function.
+
 <pre>
 print ("hello") # python 2 or 3
 print "hello"   # only python 2.  Error in Python 3
@@ -23,8 +25,11 @@ if sys.version_info[0] < 3:
 # A group of individual statements, which make a single code block are called suites in Python.
 # Compound or complex statements, such as if, while, def, and class require a header line and a suite.
 
-# since no braces to define code blocks, python uses indentation to define code blocks.  NOTE: strictly enforced!
-# see https://www.tutorialspoint.com/python/python_basic_syntax.htm
+# since no braces to define code blocks, python uses indentation to define code blocks.
+ 
+NOTE: strictly enforced!
+
+see [https://www.tutorialspoint.com/python/python_basic_syntax.htm](https://www.tutorialspoint.com/python/python_basic_syntax.htm)
  
 if True:
 	print ("yes")
@@ -78,7 +83,7 @@ a,b,c = ["fred", "john", "mary"] # assignment from a list
 
 ### Numbers
 
-<pre>	
+<pre>
 # numbers may be: int, long, float or complex
 d = 5
 e = 51234524L  # denotes a long
