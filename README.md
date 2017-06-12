@@ -27,10 +27,6 @@ if sys.version_info[0] < 3:
 
 # since no braces to define code blocks, python uses indentation to define code blocks.
  
-NOTE: strictly enforced!
-
-see [https://www.tutorialspoint.com/python/python_basic_syntax.htm](https://www.tutorialspoint.com/python/python_basic_syntax.htm)
- 
 if True:
 	print ("yes")
 	print ("ok")
@@ -38,6 +34,11 @@ else:
 	print ("no")
 	print ("not ok")
 </pre>
+
+NOTE: indentation in Python is strictly enforced!
+
+see [https://www.tutorialspoint.com/python/python_basic_syntax.htm](https://www.tutorialspoint.com/python/python_basic_syntax.htm)
+
 
 ### Line Continuation
 
