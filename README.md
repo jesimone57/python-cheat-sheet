@@ -7,6 +7,7 @@ Examples drawn from
 ### Python 2 and 3 are incompatible
 <pre>
 print ("hello") # python 2 or 3
+print "hello"   # only python 2.  Error in Python 3
 </pre>
 
 ###  Checking The Python Version
@@ -19,11 +20,11 @@ if sys.version_info[0] < 3:
 ### Code Blocks
 
 <pre>
- # A group of individual statements, which make a single code block are called suites in Python.
- # Compound or complex statements, such as if, while, def, and class require a header line and a suite.
+# A group of individual statements, which make a single code block are called suites in Python.
+# Compound or complex statements, such as if, while, def, and class require a header line and a suite.
 
- # since no braces to define code blocks, python uses indentation to define code blocks.  NOTE: strictly enforced!
- # see https://www.tutorialspoint.com/python/python_basic_syntax.htm
+# since no braces to define code blocks, python uses indentation to define code blocks.  NOTE: strictly enforced!
+# see https://www.tutorialspoint.com/python/python_basic_syntax.htm
  
 if True:
 	print ("yes")
@@ -36,7 +37,7 @@ else:
 ### Line Continuation
 
 <pre>
- # line continuation uses \ to continue the line
+# line continuation uses \ to continue the line
 print 1+\
 1+\
 1
@@ -44,7 +45,7 @@ print 1+\
 
 ### Assignment
 
-</pre>
+<pre>
 counter = 100          # An integer assignment
 miles   = 1000.0       # A floating point
 name    = "John"       # A string
@@ -58,6 +59,7 @@ print (counter, name, car, hello)   # prints 100 John Bob's car is fast Joe said
 </pre>
 
 ### Multiple Assignment
+
 <pre>
 a = b = c = 1
 a,b,c = 1, 2, "john"
@@ -66,13 +68,18 @@ a,b,c = ["fred", "john", "mary"] # assignment from a list
 </pre>
 
 ### Five Standard Data Types
- # number, string, list, tuple and dictionary
+
+* number
+* string 
+* list
+* tuple 
+* dictionary
+
 
 ### Numbers
 
-<pre>
-	
- # numbers may be: int, long, float or complex
+<pre>	
+# numbers may be: int, long, float or complex
 d = 5
 e = 51234524L  # denotes a long
 f = -21.9      # denotes a float
@@ -89,8 +96,8 @@ del a,b,c
 ### Strings 
 
 <pre>
- # use either single ' or double " quotes
- # substrings use the slice operator [ ]
+# use either single ' or double " quotes
+# substrings use the slice operator [ ]
 str = 'Hello World!'
 print (len(str))
 
@@ -108,10 +115,10 @@ print str[-2]	   # second char off the end of string -> 'd'
 ### Lists
 
 <pre>
- # Lists are the most versatile of python's compound data types.
- # We use [ ] to define a list.
- # all items in a list may be different data types
- # sublists use the slice operator [ ]
+# Lists are the most versatile of python's compound data types.
+# We use [ ] to define a list.
+# all items in a list may be different data types
+# sublists use the slice operator [ ]
 
 a = [1, 2L, 5.9, "john", 3+2j]
 print a 
@@ -138,10 +145,10 @@ print 'frank' not in list # -> True
 ### Tuples
 
 <pre>
- # Unlike lists, however, tuples are enclosed within parentheses.
- # Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, 
- # while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. 
- # Tuples can be thought of as read-only lists.
+# Unlike lists, however, tuples are enclosed within parentheses.
+# Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, 
+# while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. 
+# Tuples can be thought of as read-only lists.
 
 tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
 tinytuple = (123, 'john')
@@ -158,16 +165,16 @@ tuple[0] = 1     # error: TypeError: 'tuple' object does not support item assign
 ### Dictionary
  
 <pre>
- # Python's dictionaries are kind of hash table type. 
- # They work like associative arrays or hashes found in Perl and consist of key-value pairs. 
- # A dictionary key can be almost any Python type, but are usually numbers or strings. 
- # Values, on the other hand, can be any arbitrary Python object.
+# Python's dictionaries are kind of hash table type. 
+# They work like associative arrays or hashes found in Perl and consist of key-value pairs. 
+# A dictionary key can be almost any Python type, but are usually numbers or strings. 
+# Values, on the other hand, can be any arbitrary Python object.
 
- # Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed 
- # using square braces ([]).
- # NOTE: Dictionaries have no concept of order among elements.
+# Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed 
+# using square braces ([]).
+# NOTE: Dictionaries have no concept of order among elements.
 
- # NOTE: Both keys and values can be variables.  For example
+# NOTE: Both keys and values can be variables.  For example
 a=1
 b=2
 c = {a:b, b:a}
@@ -215,8 +222,8 @@ not or and	# logical operators
 
 ### If statement
 <pre>
- # Python programming language assumes any non-zero and non-null values as TRUE, 
- # and if it is either zero or null, then it is assumed as FALSE value.
+# Python programming language assumes any non-zero and non-null values as TRUE, 
+# and if it is either zero or null, then it is assumed as FALSE value.
 
 print 0 == True   # -> False
 print 1 == True   # -> True
@@ -228,6 +235,7 @@ print "Good bye!"
 </pre>
 
 ### multiline if
+<pre>
 a = 5
 if (a == 5) :
 	print "a is 5"
@@ -235,9 +243,10 @@ if (a == 5) :
 else:
 	print "a is not 5"
 	print "no it is not"
-
+</pre>
 
 ### Looping For and While
+<pre>
 for x in range(1,10):
 	print (x)
 
@@ -248,7 +257,7 @@ x=1
 while x<10:
 	print(x)
 	x +=1
-	
+</pre>	
 	
 ### Classes
 <pre>
@@ -281,6 +290,7 @@ c.getAttr()          # again call parent's method
 </pre>
 
 ### Import Libraries
+<pre>
 import math
 print (math.sqrt(10))
-
+</pre>
