@@ -1,5 +1,8 @@
 # Python Cheat Sheet
 
+[Python Standard Library](https://docs.python.org/3/library/index.html)
+[Python Language Reference](https://docs.python.org/3/reference/index.html)
+
 Examples drawn from 
 
 [https://www.tutorialspoint.com/python/](https://www.tutorialspoint.com/python/)
