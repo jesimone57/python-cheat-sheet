@@ -118,6 +118,14 @@ print str[-1]	   # last char off the end of string -> '!'
 print str[-2]	   # second char off the end of string -> 'd'
 </pre>
 
+### Strings Functions
+
+<pre>
+a = "   \t\tFRED   \n"
+print(a.strip())  # -> 'FRED'
+print(a.lower())  # -> 'fred'
+</pre>
+
 ### Lists
 
 <pre>
@@ -240,7 +248,7 @@ if ( var  == 100 ) : print "Value of expression is 100"
 print "Good bye!" 
 </pre>
 
-### multiline if
+### multiline If
 <pre>
 a = 5
 if (a == 5) :
