@@ -201,15 +201,24 @@ print c    # ->  {1: 2, 2: 1}
 dict = {}
 dict['one'] = "This is one"  # add to dict
 dict[2]     = "This is two"  # add to dict
-print dict     # we get -> {2: 'This is two', 'one': 'This is one'}
+
+print (dict)     # we get -> {2: 'This is two', 'one': 'This is one'}
+print (dict['one'])       # Prints value for 'one' key -> 'This is one'
+print (dict[2])           # Prints value for 2 key -> 'This is two'
 
 tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
 
-print dict['one']       # Prints value for 'one' key -> 'This is one'
-print dict[2]           # Prints value for 2 key -> 'This is two'
-print tinydict          # Prints complete dictionary
-print tinydict.keys()   # Prints all the keys
-print tinydict.values() # Prints all the values
+print (tinydict)          # Prints complete dictionary: {'dept': 'sales', 'code': 6734, 'name': 'john'}
+print (tinydict.keys())   # Prints all the keys: ['dept', 'code', 'name']
+print (tinydict.values()) # Prints all the values: ['sales', 6734, 'john']
+
+data = {"sample1": 356, "sample2": 34, "sample3": 59, "sample4": 78, "sample5": 602, "sample6": 143}
+
+print (max(data, key=data.get))  	# prints the key with the max value;  sample5
+print (data[max(data, key=data.get)])   # prints the max value of the key with the max value: 602
+
+print (min(data, key=data.get))  	# prints the key with the min value;  sample2
+print (data[min(data, key=data.get)])   # prints the min value of the key with the min value: 34
 </pre>
 
 ### Data Type Conversion
