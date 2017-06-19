@@ -9,7 +9,8 @@ Examples drawn from
 [https://www.tutorialspoint.com/python/](https://www.tutorialspoint.com/python/)
 
 ### Python 2 and 3 are incompatible
-In python 2 print is a statement but in python 3 print is a function.
+* In Python 2 print is a statement but in Python 3 print is a function.
+* In Python 2 long is a data type.  In Python 3 all ints are long and specifying a number as a long (3L), will yeild a syntax error
 
 <pre>
 print ("hello") # python 2 or 3
@@ -91,7 +92,7 @@ a,b,c = ["fred", "john", "mary"] # assignment from a list
 <pre>
 # numbers may be: int, long, float or complex
 d = 5
-e = 51234524L  # denotes a long
+e = 51234524L  # denotes a long in python 2.  NOTE: In python 3 Error -> SyntaxError: invalid syntax 
 f = -21.9      # denotes a float
 g = 3+2j + 4+6j  # denotes a complex number 7+8j
 h = 2e3        # denotes 2000.0
