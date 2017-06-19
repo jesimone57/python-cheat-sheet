@@ -219,6 +219,8 @@ print (float(3))     # -> 3.0
 print (long(5.0))    # -> 5L
 print (hex(255))     # -> '0xff'
 print (int(1.000))   # -> 1
+print (list("fred")) # -> ['f', 'r', 'e', 'd']
+print (str(10) + str(3.4)) # -> 103.4   (not 13.4)
 </pre>
 
 ### Operator Precedence
@@ -252,7 +254,7 @@ if ( var  == 100 ) : print "Value of expression is 100"
 print "Good bye!" 
 </pre>
 
-### multiline If
+### Multiline If
 <pre>
 a = 5
 if (a == 5) :
@@ -270,6 +272,9 @@ for x in range(1,10):
 
 for x in range(1,100,5):
 	print (x)
+	
+for i in list(str("hello world")):
+	print (i)
 
 x=1
 while x<10:
