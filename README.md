@@ -169,14 +169,16 @@ print 'frank' not in list # -> True
 # Tuples can be thought of as read-only lists.
 
 tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+
+print (tuple)           # Prints complete tuple
+print (tuple[0])        # Prints first element of the tuple
+print (tuple[1:3])      # Prints elements starting from 2nd till 3rd 
+print (tuple[2:])       # Prints elements starting from 3rd element
+
 tinytuple = (123, 'john')
 
-print tuple           # Prints complete tuple
-print tuple[0]        # Prints first element of the tuple
-print tuple[1:3]      # Prints elements starting from 2nd till 3rd 
-print tuple[2:]       # Prints elements starting from 3rd element
-print tinytuple * 2   # Prints tuple two times -> (123, 'john', 123, 'john')
-print tuple + tinytuple # Prints concatenated tuples -> ('abcd', 786, 2.23, 'john', 70.2, 123, 'john')
+print (tinytuple * 2)     # Prints tuple two times -> (123, 'john', 123, 'john')
+print (tuple + tinytuple) # Prints concatenated tuples -> ('abcd', 786, 2.23, 'john', 70.2, 123, 'john')
 tuple[0] = 1     # error: TypeError: 'tuple' object does not support item assignment
 </pre>
 
@@ -221,15 +223,58 @@ print (min(data, key=data.get))  	# prints the key with the min value;  sample2
 print (data[min(data, key=data.get)])   # prints the min value of the key with the min value: 34
 </pre>
 
+### Set
+
+<pre>
+# Well, a set is like a dict with keys but no values, and they're both implemented using a hash table. 
+# But yes, it's a little annoying that the {} notation denotes an empty dict rather than an empty set, 
+# but that's a historical artifact.
+
+a = {4, 4, 5, 6, 6, 4, 3, 4, 4, 4}   # obviously we have duplicate values
+print (a) 		# -> {3, 4, 5, 6}
+a[0]       # Error -> TypeError: 'set' object does not support indexing
+a + a      # Error -> TypeError: unsupported operand type(s) for +: 'set' and 'set'
+
+b = {4, 2, 17, 5}
+print (a.union(b))   # sets can be unioned together. -> {2, 3, 4, 5, 6, 17}
+print (a.intersection(b))  # intersection is all common elements.  -> {4, 5}
+print (a.difference(b))    # remove b elments from a.  -> {3, 6}
+
+print ({4,2}.issubset(b))  # is subset of.  -> True
+print (b.issubset(b))      # b is a subset of itself. -> True
+
+print ({17, 2, 4, 5, 6}.issuperset(b))  # is superset of.  -> True
+print (b.issuperset(b))    # b is a superset of itself. -> True
+
+print (3 in a)             # membership.  -> True
+print (56 not in a)        # non-membership.  ->  True
+print (len(a))             # number of elements in set a. -> 4
+print (type(a))            # datatype of a.  ->  <class 'set'>
+
+engineers = set(['John', 'Jane', 'Jack', 'Janice'])
+
+engineers.add('Bob')    # add element to set
+engineers.discard('Jack')  # removes element from set if present
+
+print (engineers)   # -> {'Jane', 'Janice', 'Bob', 'John'} 
+</pre>
+	
 ### Data Type Conversion
 
 <pre>
+print (type(3.0))    # -> <class 'float'>
 print (float(3))     # -> 3.0
-print (long(5.0))    # -> 5L
+
+print (long(5.0))    # -> 5L  NOTE:  only in python 2.  Use int() in python 3 
+# All integers are long in python3 and call to covert is just int
+
 print (hex(255))     # -> '0xff'
+print (type(3))      # -> <class 'int'>
 print (int(1.000))   # -> 1
 print (list("fred")) # -> ['f', 'r', 'e', 'd']
 print (str(10) + str(3.4)) # -> 103.4   (not 13.4)
+print (type({1,2,3})) # -> <class 'set'>
+print (set(list("hello")))  # -> list to set: {'o', 'h', 'l', 'e'}
 </pre>
 
 ### Operator Precedence
