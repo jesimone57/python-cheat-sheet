@@ -227,8 +227,7 @@ print (data[min(data, key=data.get)])   # prints the min value of the key with t
 
 <pre>
 # Well, a set is like a dict with keys but no values, and they're both implemented using a hash table. 
-# But yes, it's a little annoying that the {} notation denotes an empty dict rather than an empty set, 
-# but that's a historical artifact.
+# It's a little annoying that the {} notation denotes an empty dict rather than an empty set, but that's a historical artifact.
 
 a = {4, 4, 5, 6, 6, 4, 3, 4, 4, 4}   # obviously we have duplicate values
 print (a) 		# -> {3, 4, 5, 6}
@@ -266,7 +265,7 @@ print (type(3.0))    # -> <class 'float'>
 print (float(3))     # -> 3.0
 
 print (long(5.0))    # -> 5L  NOTE:  only in python 2.  Use int() in python 3 
-# All integers are long in python3 and call to covert is just int
+# All integers are long in python 3 and call to convert is just int( )
 
 print (hex(255))     # -> '0xff'
 print (type(3))      # -> <class 'int'>
@@ -279,18 +278,18 @@ print (set(list("hello")))  # -> list to set: {'o', 'h', 'l', 'e'}
 
 ### Operator Precedence
 <pre>
-** 			# exponentiation
+** 		# exponentiation
 ~ + -   	# unary not, unary positive and unary negative
 * / % //	# multiply, divide, modulo and floor
-+ -			# addition and subtraction
++ -		# addition and subtraction
 >> <<		# right and left bitwise shift
-&			# bitwise and
-^ |			# bitwise exclusive or and regular or
+&		# bitwise and
+^ |		# bitwise exclusive or and regular or
 <= <> >=	# comparison operators
 < > == !=	# equality operators: less, greater, equal and not equal
 = %= /= //= -= += *= **= 	# assignment operators
-is is not	# identity operators
-in not in	# membership operators
+is, is not	# identity operators
+in, not in	# membership operators
 not or and	# logical operators
 </pre>
 
