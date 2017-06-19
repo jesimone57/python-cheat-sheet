@@ -10,11 +10,15 @@ Examples drawn from
 
 ### Python 2 and 3 are incompatible
 * In Python 2 print is a statement but in Python 3 print is a function.
-* In Python 2 long is a data type.  In Python 3 all ints are long and specifying a number as a long (3L), will yeild a syntax error
-
 <pre>
-print ("hello") # python 2 or 3
-print "hello"   # only python 2.  Error in Python 3
+print ("hello") # Python 2 or 3
+print "hello"   # only Python 2.  Error in Python 3
+</pre>
+
+* In Python 2 long is a data type.  In Python 3 all integers are long and specifying a number as a long (3L), will yeild a syntax error
+<pre>
+print (2L + 3L)		# in Python 2 -> 5
+print (2L)			# in Python 3 -> SyntaxError: invalid syntax
 </pre>
 
 ###  Checking The Python Version
