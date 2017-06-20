@@ -73,10 +73,10 @@ name    = "John"       # A string
 hello = 'Joe said "Hi"'   # a string with quotes
 car = "Bob's car is fast" # a string with quotes
 
-print counter
-print miles
-print name
-print (counter, name, car, hello)   # prints 100 John Bob's car is fast Joe said "Hi"
+print (counter)
+print (miles)
+print (name)
+print (counter, name, car, hello)   # prints -> 100 John Bob's car is fast Joe said "Hi"
 </pre>
 
 ### Multiple Assignment
@@ -167,8 +167,8 @@ print ('--'.join(['one', 'two', 'three']))	# join the sequence using separator -
 # all items in a list may be different data types
 # sublists use the slice operator [ ]
 
-a = [1, 2L, 5.9, "john", 3+2j]
-print a 
+a = [1, {3,5,7,11}, 5.9, "john", 3+2j]
+print (a) 
 
 list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
 tinylist = [123, 'john']
@@ -176,17 +176,17 @@ empty = []
 empty += [1]  # add item to empty list
 
 
-print list          # Prints complete list
-print list[0]       # Prints first element of the list
-print list[1:3]     # Prints elements starting from 2nd till 3rd 
-print list[2:]      # Prints elements starting from 3rd element
-print tinylist * 2  # Prints list two times  -> [123, 'john', 123, 'john']
-print list + tinylist # Prints concatenated lists  -> ['abcd', 786, 2.23, 'john', 70.2, 123, 'john']
-print list[-1]      # last item off the back of the list -> 70.2
-print list[-2]      # second to last item off the back of the list -> 'john'
+print (list)          # Prints complete list
+print (list[0])       # Prints first element of the list -> 'abcd'
+print (list[1:3])     # Prints elements starting from 2nd till 3rd -> [786, 2.23]
+print (list[2:])      # Prints elements starting from 3rd element -> [2.23, 'john', 70.2]
+print (tinylist * 2)  # Prints list two times  -> [123, 'john', 123, 'john']
+print (list + tinylist) # Prints concatenated lists  -> ['abcd', 786, 2.23, 'john', 70.2, 123, 'john']
+print (list[-1])      # last item off the back of the list -> 70.2
+print (list[-2])      # second to last item off the back of the list -> 'john'
 list[0] = "frank"   # assignment
-print 'john' in list      # -> True
-print 'frank' not in list # -> True
+print ('john' in list)      # -> True
+print ('sebastian' not in list) # -> True
 </pre>
 
 ### Tuples
@@ -332,8 +332,9 @@ print 1 == True   # -> True
 
 ### Single line if
 var = 100
-if ( var  == 100 ) : print "Value of expression is 100"
-print "Good bye!" 
+if ( var  == 100 ) : print ("Value of expression is 100")
+
+print ("Good bye!") 
 </pre>
 
 ### Multiline If
@@ -372,23 +373,23 @@ while x<10:
 class Parent:        # define parent class
 	parentAttr = 100
 	def _init_(self):
-		print "Calling parent constructor"
+		print ("Calling parent constructor")
 		
 	def parentMethod(self):
-		print 'Calling parent method'
+		print ('Calling parent method')
 		
 	def setAttr(self, attr):
 		Parent.parentAttr = attr
 		
 	def getAttr(self):
-		print "Parent attribute :", Parent.parentAttr
+		print ("Parent attribute :", Parent.parentAttr)
 
 class Child(Parent): # define child class
 	def _init_(self):
-		print "Calling child constructor"
+		print ("Calling child constructor")
 		
 	def childMethod(self):
-		print 'Calling child method'
+		print ('Calling child method')
 
 c = Child()          # instance of child
 c.childMethod()      # child calls its method
