@@ -155,7 +155,7 @@ print (c.rstrip('*'))	# -> '**awesome'
 print (d.split(','))	# returns a list -> ['one', 'two', 'three']
 print (d.replace('one', 'uno'))	# replace all occurences in string -> 'uno,two,three'
 print (d.count('o'))	# count the number of occurrences -> 2
-print ('--'.join(['one', 'two', 'three']))	# join the sequence using the given separator -> 'one--two--three'
+print ('--'.join(['one', 'two', 'three']))	# join the sequence using separator -> 'one--two--three'
 </pre>
 [Python 3 String methods reference](https://docs.python.org/3/library/stdtypes.html#string-methods)
 
@@ -338,13 +338,16 @@ print "Good bye!"
 
 ### Multiline If
 <pre>
-a = 5
-if (a == 5) :
-	print "a is 5"
-	print 'yes it is'
+name = 'fred'
+if (name == 'fred') :
+	print ("i like "+name)
+	print ('nice guy')
+elif (name == 'jim') :
+	print ("i don't like "+name)
+	print ('not a very nice guy')
 else:
-	print "a is not 5"
-	print "no it is not"
+	print ("who is "+name)
+	print ("I don't know "+name)
 </pre>
 
 ### Looping For and While
@@ -360,7 +363,7 @@ for i in list(str("hello world")):
 
 x=1
 while x<10:
-	print(x)
+	print (x)
 	x +=1
 </pre>	
 	
