@@ -291,18 +291,18 @@ print (engineers)   # -> {'Jane', 'Janice', 'Bob', 'John'}
 ### Data Type Conversion
 
 <pre>
-print (type(3.0))    # -> <class 'float'>
+print (type(3.0))    # -> &lt;class 'float'&gt;
 print (float(3))     # -> 3.0
 
 print (long(5.0))    # -> 5L  NOTE:  only in python 2.  Use int() in python 3 
 # All integers are long in python 3 and call to convert is just int( )
 
 print (hex(255))     # -> '0xff'
-print (type(3))      # -> <class 'int'>
+print (type(3))      # -> &lt;class 'int'&gt;
 print (int(1.000))   # -> 1
 print (list("fred")) # -> ['f', 'r', 'e', 'd']
 print (str(10) + str(3.4)) # -> 103.4   (not 13.4)
-print (type({1,2,3})) # -> <class 'set'>
+print (type({1,2,3})) # -> &lt;class 'set'&gt;
 print (set(list("hello")))  # -> list to set: {'o', 'h', 'l', 'e'}
 </pre>
 
