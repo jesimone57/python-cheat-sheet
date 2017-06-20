@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-# Example Python program to determin the letter/character frequency in text
+# Example Python program to determine the letter/character frequency in text
 
 import sys
 if sys.version_info[0] < 3:
@@ -26,7 +26,7 @@ for i in list(text_cleaned):
 
 # summarize results 
 print ("Input Text:  "+text)       
-for key in freq_dict:
-    print("Letter "+key+" appears "+str(freq_dict[key])+" times")
+for (key, value) in freq_dict.items():
+    print("Letter "+key+" appears "+str(value)+" times")
 
 print ("Done")
