@@ -15,7 +15,7 @@ print ("hello")		# Python 2 or 3
 print "hello"		# only Python 2.  Error in Python 3
 </pre>
 
-* In Python 2 long is a data type.  In Python 3 all integers are long and specifying a number as a long (3L), will yeild a syntax error
+* In Python 2 long is a data type.  In Python 3 all integers are long and specifying a number as a long (3L), will yield a syntax error
 <pre>
 print (2L + 3L)		# in Python 2 -> 5
 print (2L)		# in Python 3 -> SyntaxError: invalid syntax
@@ -88,13 +88,14 @@ a,b,c = (1,2,3)  # assignment from a tuple
 a,b,c = ["fred", "john", "mary"] # assignment from a list		
 </pre>
 
-### Five Standard Data Types
+### Six Standard Data Types
 
 * number
 * string 
 * list
 * tuple 
 * dictionary
+* set
 
 
 ### Numbers
@@ -119,27 +120,44 @@ del a,b,c
 <pre>
 # use either single ' or double " quotes
 # substrings use the slice operator [ ]
-str = 'Hello World!'
-print (len(str))
+s = 'Hello World!'
+print (len(s))	# -> 12
 
-print str          # Prints complete string
-print str[0]       # Prints first character of the string
-print str[2:5]     # Prints characters starting from 3rd to 5th
-print str[2:]      # Prints string starting from 3rd character
-print str * 2      # Prints string two times -> 'Hello World!Hello World!'
-print str + "TEST" # Prints concatenated string
+print (s)          # Prints complete string -> 'Hello World!'
+print (s[0])       # Prints first character of the string -> 'H'
+print (s[2:5])     # Prints characters starting from 3rd to 5th -> 'llo'
+print (s[2:])      # Prints string starting from 3rd character -> 'llo World!'
+print (s[:4])      # Prints string starting from index 0 character to 4th character-> 'Hell'
+print (s * 2)      # Prints string two times -> 'Hello World!Hello World!'
+print (s + "TEST") # Prints concatenated string
 
-print str[-1]	   # last char off the end of string -> '!'
-print str[-2]	   # second char off the end of string -> 'd'
+print (s[-1])	   # last char off the end of string -> '!'
+print (s[-2])	   # second char off the end of string -> 'd'
+print ("apple pie"[-9:-4])	# using slice with negative indices -> 'apple'
 </pre>
 
-### Strings Functions
+### String Methods
 
 <pre>
 a = "   \t\tFRED   \n"
-print(a.strip())  # -> 'FRED'
-print(a.lower())  # -> 'fred'
+b = 'HELLO world'
+c = '**awesome**'
+d = "one,two,three"
+
+print (a.strip())	# -> 'FRED'
+print (b.lower())	# -> 'hello world'
+print (b.upper())	# -> 'HELLO WORLD'
+print (b.endswith('orld'))	# -> True
+print (b.startswith('HEL'))	# -> True
+print (c.strip('*'))	# -> 'awesome'
+print (c.lstrip('*'))	# -> 'awesome**'
+print (c.rstrip('*'))	# -> '**awesome'
+print (d.split(','))	# returns a list -> ['one', 'two', 'three']
+print (d.replace('one', 'uno'))	# replace all occurences in string -> 'uno,two,three'
+print (d.count('o'))	# count the number of occurrences -> 2
+print ('--'.join(['one', 'two', 'three']))	# join the sequence using the given separator -> 'one--two--three'
 </pre>
+[Python 3 String methods reference](https://docs.python.org/3/library/stdtypes.html#string-methods)
 
 ### Lists
 
