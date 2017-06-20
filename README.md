@@ -21,6 +21,12 @@ print (2L + 3L)		# in Python 2 -> 5
 print (2L)		# in Python 3 -> SyntaxError: invalid syntax
 </pre>
 
+* In Python 2 integer division will truncate the answer to an integer.  In Python 3 integer division will return a float if the answer is not an integer
+<pre>
+print (3/2)		# Fractional part is truncated in Python 2 -> 1 
+print (3/2)		# in Python 3 -> 1.5
+</pre>
+
 ###  Checking The Python Version
 <pre>
 import sys
