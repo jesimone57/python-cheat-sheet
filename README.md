@@ -256,7 +256,8 @@ print (data[min(data, key=data.get)])   # prints the min value of the key with t
 
 <pre>
 # Well, a set is like a dict with keys but no values, and they're both implemented using a hash table. 
-# It's a little annoying that the {} notation denotes an empty dict rather than an empty set, but that's a historical artifact.
+# It's a little annoying that the {} notation denotes an empty dict rather than an empty set, 
+# but that's a historical artifact.
 
 a = {4, 4, 5, 6, 6, 4, 3, 4, 4, 4}   # obviously we have duplicate values
 print (a) 		# -> {3, 4, 5, 6}
@@ -277,7 +278,7 @@ print (b.issuperset(b))    # b is a superset of itself. -> True
 print (3 in a)             # membership.  -> True
 print (56 not in a)        # non-membership.  ->  True
 print (len(a))             # number of elements in set a. -> 4
-print (type(a))            # datatype of a.  ->  <class 'set'>
+print (type(a))            # datatype of a.  ->  &lt;class 'set'&gt;
 
 engineers = set(['John', 'Jane', 'Jack', 'Janice'])
 
@@ -306,6 +307,7 @@ print (set(list("hello")))  # -> list to set: {'o', 'h', 'l', 'e'}
 </pre>
 
 ### Operator Precedence
+
 <pre>
 ** 		# exponentiation
 ~ + -   	# unary not, unary positive and unary negative
@@ -323,6 +325,7 @@ not or and	# logical operators
 </pre>
 
 ### If statement
+
 <pre>
 # Python programming language assumes any non-zero and non-null values as TRUE, 
 # and if it is either zero or null, then it is assumed as FALSE value.
@@ -338,6 +341,7 @@ print ("Good bye!")
 </pre>
 
 ### Multiline If
+
 <pre>
 name = 'fred'
 if (name == 'fred') :
@@ -352,6 +356,7 @@ else:
 </pre>
 
 ### Looping For and While
+
 <pre>
 for x in range(1,10):
 	print (x)
@@ -369,6 +374,7 @@ while x<10:
 </pre>	
 	
 ### Classes
+
 <pre>
 class Parent:        # define parent class
 	parentAttr = 100
@@ -399,6 +405,7 @@ c.getAttr()          # again call parent's method
 </pre>
 
 ### Import Libraries
+
 <pre>
 import math
 print (math.sqrt(10))
