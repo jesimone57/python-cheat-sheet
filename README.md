@@ -28,6 +28,16 @@ print (3/2)		# Fractional part is truncated in Python 2 -> 1
 print (3/2)		# in Python 3 -> 1.5
 </pre>
 
+* In Python 2 rounding of numbers would always round uo  
+In Python 3 rounding changed to round to nearest event number
+<pre>
+print (round(2.5))   #  rounds to nearest even integer in python 3 ->  2
+print (round(3.5))   #  rounds to nearest even integer in python 3 ->  4
+
+print (round(2.5))   #  rounds up in python 2 ->  3.0
+print (round(3.5))   #  rounds up in python 2 ->  4.0
+</pre>
+
 ###  Checking The Python Version
 <pre>
 import sys
