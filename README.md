@@ -28,7 +28,7 @@ print (3/2)		# Fractional part is truncated in Python 2 -> 1
 print (3/2)		# in Python 3 -> 1.5
 </pre>
 
-* In Python 2 rounding of numbers would always round uo  
+* In Python 2 rounding of numbers would always round up  
 In Python 3 rounding changed to round to nearest event number
 <pre>
 print (round(2.5))   #  rounds to nearest even integer in python 3 ->  2
@@ -51,7 +51,7 @@ if sys.version_info[0] < 3:
 # A group of individual statements, which make a single code block are called suites in Python.
 # Compound or complex statements, such as if, while, def, and class require a header line and a suite.
 
-# since no braces to define code blocks, python uses indentation to define code blocks.
+# Since braces do not define code blocks, python uses indentation to define code suite (aka a block).
  
 if True:
 	print ("yes")
@@ -99,6 +99,29 @@ a,b,c = (1,2,3)  # assignment from a tuple
 a,b,c = ["fred", "john", "mary"] # assignment from a list		
 </pre>
 
+### Using command line parameters
+* sys.argv is a list in Python, which contains the command-line arguments passed to the script.
+* To use sys.argv, you will first have to import the sys module. 
+
+<pre>
+import sys
+print( sys.argv )	# all command line params are in the sys.argv array
+print( "This is the name of the script: ", sys.argv[0])
+print( "Number of arguments: ", len(sys.argv))
+print( "The arguments are: " , str(sys.argv))
+print( "All other arguments besides the script name itself: " , str(sys.argv[1:]))
+</pre>
+
+output for the above script named args.py :
+<pre>
+python args.py one two three
+['args.py', 'one', 'two', 'three']
+This is the name of the script:  args.py
+Number of arguments:  4
+The arguments are:  ['args.py', 'one', 'two', 'three']
+All other arguments besides the script name itself:  ['one', 'two', 'three']
+</pre>
+
 ### Six Standard Data Types
 
 * number
@@ -128,9 +151,10 @@ del a,b,c
 
 ### Strings 
 
+* use either single ' or double " quotes
+* substrings use the slice operator [ ]
+
 <pre>
-# use either single ' or double " quotes
-# substrings use the slice operator [ ]
 s = 'Hello World!'
 print (len(s))	# -> 12
 
@@ -167,17 +191,23 @@ print (d.split(','))	# returns a list -> ['one', 'two', 'three']
 print (d.replace('one', 'uno'))	# replace all occurences in string -> 'uno,two,three'
 print (d.count('o'))	# count the number of occurrences -> 2
 print ('--'.join(['one', 'two', 'three']))	# join the sequence using separator -> 'one--two--three'
+
+# formatting strings with variables
+"My name is {0} and your name is {1}".format('Fred', "Ted")
 </pre>
+
 [Python 3 String methods reference](https://docs.python.org/3/library/stdtypes.html#string-methods)
+[Advanced String formatting](https://www.python.org/dev/peps/pep-3101/)
+
 
 ### Lists
 
-<pre>
-# Lists are the most versatile of python's compound data types.
-# We use [ ] to define a list.
-# all items in a list may be different data types
-# sublists use the slice operator [ ]
+* Lists are the most versatile of python's compound data types.
+* We use [ ] to define a list.
+* all items in a list may be different data types
+* sublists use the slice operator [ ]
 
+<pre>
 a = [1, {3,5,7,11}, 5.9, "john", 3+2j]
 print (a) 
 
@@ -202,12 +232,12 @@ print ('sebastian' not in list) # -> True
 
 ### Tuples
 
-<pre>
-# Unlike lists, however, tuples are enclosed within parentheses.
-# Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, 
-# while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. 
-# Tuples can be thought of as read-only lists.
+* Unlike lists, however, tuples are enclosed within parentheses.
+* Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed 
+* Tuples are enclosed in parentheses ( ( ) ) and cannot be updated. 
+* Tuples can be thought of as read-only lists.
 
+<pre>
 tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
 
 print (tuple)           # Prints complete tuple
