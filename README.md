@@ -151,7 +151,7 @@ del a,b,c
 
 ### Strings 
 
-* use either single ' or double " quotes
+* String may use either single ' or double " quotes
 * substrings use the slice operator [ ]
 
 <pre>
@@ -197,6 +197,7 @@ print ('--'.join(['one', 'two', 'three']))	# join the sequence using separator -
 </pre>
 
 [Python 3 String methods reference](https://docs.python.org/3/library/stdtypes.html#string-methods)
+
 [Advanced String formatting](https://www.python.org/dev/peps/pep-3101/)
 
 
