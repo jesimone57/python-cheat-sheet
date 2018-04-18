@@ -50,7 +50,7 @@ if sys.version_info[0] < 3:
 * A group of individual statements, which make a single code block are called suites in Python.
 * Compound or complex statements, such as if, while, def, and class require a header line and a suite.
 * Since braces are not used to define code blocks, python uses indentation to define code suite (aka a block).
-* NOTE: indentation in Python is strictly enforced!
+* **NOTE:** indentation in Python is strictly enforced!
 
 <pre>
 if True:
@@ -480,4 +480,9 @@ c.getAttr()          # again call parent's method
 <pre>
 import math
 print (math.sqrt(10))
+</pre>
+
+### Throwing Exceptions
+<pre>
+if a != 1 :	raise Exception("a was not equal to 1")		# Exception: a was not equal to 1
 </pre>
