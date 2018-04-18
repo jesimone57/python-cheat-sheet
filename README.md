@@ -475,6 +475,30 @@ c.setAttr(200)       # again call parent's method
 c.getAttr()          # again call parent's method
 </pre>
 
+### User Defined Functions
+* Use the def keyword to define a new function
+* Function parameters may have default values
+* Functions may have a variable number of parameters
+* return is optional if nothing is returned
+
+<pre>
+def defaultArg( name, msg = "Hello!"):
+	print(msg, name)
+
+# When we call the function we don't supply the second argument
+defaultArg("Fred")	# prints "Hello! fred"
+
+# Using named parameters we can change the order of the parameters
+defaultArg(msg = "Bye", name = "Tom")		# prints "Bye Tom"
+
+def varArgs(*list):
+    for i in list:
+            print(i)
+	   
+varArgs(1)		# prints 1
+varArgs(1, "jack", [ 1,2,3])	# prints each item on its own line
+</pre>
+
 ### Import Libraries
 
 <pre>
