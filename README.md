@@ -45,14 +45,14 @@ if sys.version_info[0] < 3:
 	raise Exception("Must be using python 3")
 </pre>
 
-### Code Blocks
+### Code Blocks (also called code suites)
+
+* A group of individual statements, which make a single code block are called suites in Python.
+* Compound or complex statements, such as if, while, def, and class require a header line and a suite.
+* Since braces are not used to define code blocks, python uses indentation to define code suite (aka a block).
+* NOTE: indentation in Python is strictly enforced!
 
 <pre>
-# A group of individual statements, which make a single code block are called suites in Python.
-# Compound or complex statements, such as if, while, def, and class require a header line and a suite.
-
-# Since braces do not define code blocks, python uses indentation to define code suite (aka a block).
- 
 if True:
 	print ("yes")
 	print ("ok")
@@ -60,8 +60,6 @@ else:
 	print ("no")
 	print ("not ok")
 </pre>
-
-NOTE: indentation in Python is strictly enforced!
 
 see [https://www.tutorialspoint.com/python/python_basic_syntax.htm](https://www.tutorialspoint.com/python/python_basic_syntax.htm)
 
@@ -122,6 +120,20 @@ The arguments are:  ['args.py', 'one', 'two', 'three']
 All other arguments besides the script name itself:  ['one', 'two', 'three']
 </pre>
 
+### Deleting variables from Python's namespace
+
+<pre>
+a = "Dog"
+b = [ 1, 2, 3]
+c = { 1: 2}
+d = 5
+
+del d  		# will delete d
+del a,b,c	# will delete variables a, b and c
+
+print ( d + 1) 	# NameError: name 'd' is not defined
+</pre>
+
 ### Six Standard Data Types
 
 * number
@@ -131,22 +143,22 @@ All other arguments besides the script name itself:  ['one', 'two', 'three']
 * dictionary
 * set
 
-
 ### Numbers
 
-<pre>
-# numbers may be: int, long, float or complex
-d = 5
-e = 51234524L  # denotes a long in python 2.  NOTE: In python 3 Error -> SyntaxError: invalid syntax 
-f = -21.9      # denotes a float
-g = 3+2j + 4+6j  # denotes a complex number 7+8j
-h = 2e3        # denotes 2000.0
-i = 1e-2       # denotes 0.01
-k = 0x69	   # hex 69 equals decimal 105
-import math ; print math.sqrt(5)  # -> 2.2360679775
+* In Python numbers may be: int, long (only in Python 2), float or complex
 
-del d  # will delete d
-del a,b,c
+<pre>
+d = 5
+e = 51234524L  	# denotes a long in python 2.  NOTE: In python 3 Error -> SyntaxError: invalid syntax 
+f = -21.9      	# denotes a float
+g = 3+2j + 4+6j  # denotes a complex number 7+8j
+h = 2e3        	# denotes 2000.0
+i = 1e-2       	# denotes 0.01
+j = 11112222333344441111222233334444
+print (j * 2)	# 22224444666688882222444466668888
+k = 0x69	# hex 69 equals decimal 105
+
+import math ; print math.sqrt(5)  # -> 2.2360679775
 </pre>
 
 ### Strings 
