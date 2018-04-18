@@ -254,17 +254,17 @@ tuple[0] = 1     # error: TypeError: 'tuple' object does not support item assign
 </pre>
 
 ### Dictionary
- 
+
+* Python's dictionaries are kind of hash table type. 
+* They work like associative arrays or hashes found in Perl and consist of key-value pairs. 
+* A dictionary key can be almost any Python type, but are usually numbers or strings. 
+* Values, on the other hand, can be any arbitrary Python object including other dictionaries.
+
+* Dictionaries are enclosed by curly braces ({ }) 
+* Dictionary values can be assigned and accessed using square braces ([ ]).
+* Dictionaries have no concept of order among elements.
+
 <pre>
-# Python's dictionaries are kind of hash table type. 
-# They work like associative arrays or hashes found in Perl and consist of key-value pairs. 
-# A dictionary key can be almost any Python type, but are usually numbers or strings. 
-# Values, on the other hand, can be any arbitrary Python object.
-
-# Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed 
-# using square braces ([]).
-# NOTE: Dictionaries have no concept of order among elements.
-
 # NOTE: Both keys and values can be variables.  For example
 a=1
 b=2
@@ -279,7 +279,9 @@ print (dict)     # we get -> {2: 'This is two', 'one': 'This is one'}
 print (dict['one'])       # Prints value for 'one' key -> 'This is one'
 print (dict[2])           # Prints value for 2 key -> 'This is two'
 
-tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+tinydict = {'name': 'john','code': 6734, 'dept': 'sales'}
+anotherdict = {  "a": 1, "b": tinydict}		
+print (anotherdict) 	  # Prints  {'a': 1, 'b': {'name': 'john', 'code': 6734, 'dept': 'sales'}}
 
 print (tinydict)          # Prints complete dictionary: {'dept': 'sales', 'code': 6734, 'name': 'john'}
 print (tinydict.keys())   # Prints all the keys: ['dept', 'code', 'name']
@@ -296,11 +298,10 @@ print (data[min(data, key=data.get)])   # prints the min value of the key with t
 
 ### Set
 
-<pre>
-# Well, a set is like a dict with keys but no values, and they're both implemented using a hash table. 
-# It's a little annoying that the {} notation denotes an empty dict rather than an empty set, 
-# but that's a historical artifact.
+* A set is like a dict with keys but no values, and they're both implemented using a hash table. 
+* It's a little annoying that the {} notation denotes an empty dict rather than an empty set, but that's a historical artifact.
 
+<pre>
 a = {4, 4, 5, 6, 6, 4, 3, 4, 4, 4}   # obviously we have duplicate values
 print (a) 		# -> {3, 4, 5, 6}
 a[0]       # Error -> TypeError: 'set' object does not support indexing
@@ -328,6 +329,8 @@ engineers.add('Bob')    # add element to set
 engineers.discard('Jack')  # removes element from set if present
 
 print (engineers)   # -> {'Jane', 'Janice', 'Bob', 'John'} 
+
+d = {1, 2, "key": "val"}	# syntax error because d is neither a set nor a dictionary.  It has to be one or the other.
 </pre>
 	
 ### Data Type Conversion
@@ -368,18 +371,32 @@ not or and	# logical operators
 
 ### If statement
 
-<pre>
-# Python programming language assumes any non-zero and non-null values as TRUE, 
-# and if it is either zero or null, then it is assumed as FALSE value.
+* The Python programming language assumes 1 decimal or 1.0 float values as True
+* If a value is anything other than a boolean True, 1 or 1.0 it is assumed as a False in a comparision operation
 
-print 0 == True   # -> False
-print 1 == True   # -> True
+Some examples:
+<pre>
+print( True == True)   	# True
+print( 1 == True)   	# True
+print (1.0 == True) 	# True
+
+print (TRUE == True)	# NameError: name 'TRUE' is not defined
+print (true == True)	# NameError: name 'true' is not defined
+
+print ( "1" == True) 	# False
+print( -1 == True)   	# False
+print( 0 == True)   	# False
+print (2 == True)   	# False
+print ("True" == True)	# False
+print ( 'true' == True)	# False
+</pre>
 
 ### Single line if
+<pre>
 var = 100
 if ( var  == 100 ) : print ("Value of expression is 100")
 
-print ("Good bye!") 
+if var == 100:  print('yep it is 100')			# parens are optional
 </pre>
 
 ### Multiline If
