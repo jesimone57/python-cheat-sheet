@@ -8,7 +8,7 @@ Examples drawn from
 
 [https://www.tutorialspoint.com/python/](https://www.tutorialspoint.com/python/)
 
-### Python 2 and 3 are incompatible
+### Python 2 and 3 are Incompatible
 * In Python 2 print is a statement but in Python 3 print is a function.
 <pre>
 print ("hello")		# Python 2 or 3
@@ -97,7 +97,7 @@ a,b,c = (1,2,3)  # assignment from a tuple
 a,b,c = ["fred", "john", "mary"] # assignment from a list		
 </pre>
 
-### Using command line parameters
+### Command Line Parameters - Accessing and Using
 * sys.argv is a list in Python, which contains the command-line arguments passed to the script.
 * To use sys.argv, you will first have to import the sys module. 
 
@@ -120,7 +120,7 @@ The arguments are:  ['args.py', 'one', 'two', 'three']
 All other arguments besides the script name itself:  ['one', 'two', 'three']
 </pre>
 
-### Deleting variables from Python's namespace
+### Deleting Variables from Python's Namespace
 
 <pre>
 a = "Dog"
@@ -381,7 +381,7 @@ in, not in	# membership operators
 not or and	# logical operators
 </pre>
 
-### If statement
+### If Statement
 
 * The Python programming language assumes 1 decimal or 1.0 float values as True
 * If a value is anything other than a boolean True, 1 or 1.0 it is assumed as a False in a comparision operation
@@ -403,7 +403,7 @@ print ("True" == True)	# False
 print ( 'true' == True)	# False
 </pre>
 
-### Single line if
+### Single line If
 <pre>
 var = 100
 if ( var  == 100 ) : print ("Value of expression is 100")
